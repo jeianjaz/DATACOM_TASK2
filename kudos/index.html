@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A simple way to celebrate great work across the team." />
+  <title>Kudos | Datacom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Datacom home">
+        <span class="brand-mark">D</span>
+        <span>datacom</span>
+      </a>
+      <div class="workspace-switcher">
+        <span class="eyebrow">Workspace</span>
+        <strong>People & culture</strong>
+        <span class="switcher-chevron">⌄</span>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#" class="nav-item"><span class="nav-icon">⌂</span>Overview</a>
+        <a href="#feed" class="nav-item active"><span class="nav-icon">✦</span>Kudos</a>
+        <a href="#" class="nav-item"><span class="nav-icon">◷</span>My activity</a>
+        <a href="#" class="nav-item"><span class="nav-icon">⌁</span>Directory</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="help-card">
+          <span class="help-icon">?</span>
+          <div><strong>Need a hand?</strong><span>Visit the help centre</span></div>
+          <span>↗</span>
+        </div>
+        <div class="profile-mini">
+          <div class="avatar avatar-amber">JM</div>
+          <div><strong>Jordan Mitchell</strong><span>Product designer</span></div>
+          <button class="icon-button" aria-label="Open profile menu">•••</button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="mobile-menu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumbs"><span>People & culture</span><span>/</span><strong>Kudos</strong></div>
+        <div class="topbar-actions"><button class="icon-button" aria-label="Search">⌕</button><button class="icon-button notification" aria-label="Notifications">♧<i></i></button><div class="avatar avatar-amber">JM</div></div>
+      </header>
+
+      <section class="page-intro">
+        <div>
+          <p class="eyebrow accent">TEAM APPRECIATION</p>
+          <h1>Make good work<br /><em>feel seen.</em></h1>
+          <p class="intro-copy">A little recognition goes a long way. Celebrate someone who made your day, solved a tricky problem, or simply showed up brilliantly.</p>
+        </div>
+        <div class="intro-stat"><span class="stat-spark">✦</span><strong id="month-count">24</strong><span>kudos shared<br />this month</span></div>
+      </section>
+
+      <section class="content-grid">
+        <div class="compose-panel" aria-labelledby="compose-title">
+          <div class="panel-heading"><div><span class="step-number">01</span><h2 id="compose-title">Give some kudos</h2></div><span class="panel-doodle">✺</span></div>
+          <form id="kudos-form" novalidate>
+            <label for="recipient">Who are you celebrating?</label>
+            <div class="select-wrap"><select id="recipient" required><option value="">Choose a colleague...</option><option value="maya">Maya Chen</option><option value="liam">Liam O'Connor</option><option value="priya">Priya Nair</option><option value="tom">Tom Williams</option><option value="sarah">Sarah Patel</option><option value="alex">Alex Johnson</option></select><span>⌄</span></div>
+            <label for="message">Your message</label>
+            <textarea id="message" maxlength="240" placeholder="Tell them why they're great..."></textarea>
+            <div class="form-meta"><span id="char-count">0 / 240</span><span>Keep it kind and specific</span></div>
+            <button type="submit" class="submit-button"><span>Send kudos</span><span class="button-arrow">↗</span></button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="feed-panel" id="feed">
+          <div class="feed-heading"><div><span class="step-number">02</span><h2>Recent celebrations</h2></div><div class="feed-actions"><button class="filter-button" id="filter-button">All kudos <span>⌄</span></button><button class="admin-toggle" id="admin-toggle" aria-pressed="false">Admin review</button></div></div>
+          <div class="feed-list" id="feed-list"></div>
+          <button class="load-more" id="load-more">Show older kudos <span>↓</span></button>
+        </div>
+      </section>
+      <dialog class="moderation-dialog" id="moderation-dialog" aria-labelledby="moderation-title">
+        <form id="moderation-form" method="dialog">
+          <h2 id="moderation-title">Moderate kudos</h2>
+          <p id="moderation-copy">Add a reason for this action.</p>
+          <label for="moderation-reason">Reason</label>
+          <textarea id="moderation-reason" maxlength="500" required placeholder="Explain the moderation decision..."></textarea>
+          <div class="dialog-actions"><button type="button" class="dialog-cancel" id="moderation-cancel">Cancel</button><button type="submit" class="dialog-confirm">Confirm action</button></div>
+        </form>
+      </dialog>
+      <footer class="page-footer"><span>Small moments. Big impact.</span><span>Last updated just now</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
