@@ -2,6 +2,8 @@
 
 A lightweight kudos feature created for the **Datacom Job Simulation**. Employees can recognise colleagues with a short message, while an internal feed displays recent celebrations.
 
+Public repository: <https://github.com/jeianjaz/DATACOM_TASK2>
+
 ## Features
 
 - Select a colleague from the employee list

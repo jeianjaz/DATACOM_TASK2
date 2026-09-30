@@ -1,5 +1,9 @@
 # Kudos System Specification
 
+## Repository
+
+Public source repository: <https://github.com/jeianjaz/DATACOM_TASK2>
+
 ## Functional Requirements
 
 ### User Stories
